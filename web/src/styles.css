@@ -1,0 +1,36 @@
+:root {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #17324d;
+  background: #edf4f7;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button { font: inherit; }
+
+.app-shell { min-height: 100vh; padding: 40px clamp(20px, 5vw, 72px); background: radial-gradient(circle at 90% 0%, #d7eef0 0, transparent 35%), #edf4f7; }
+.page-header { max-width: 1400px; margin: 0 auto 28px; display: flex; justify-content: space-between; gap: 24px; align-items: end; }
+.eyebrow, .section-label { margin: 0 0 8px; color: #e05a3f; font: 700 12px/1.2 Arial, sans-serif; letter-spacing: 1.5px; text-transform: uppercase; }
+h1, h2, p { margin-top: 0; }
+h1 { margin-bottom: 10px; font-size: clamp(2.2rem, 5vw, 4.5rem); line-height: .95; font-weight: 700; letter-spacing: 0; }
+.intro { max-width: 520px; margin-bottom: 0; color: #587082; font-size: 1.1rem; }
+.header-note { padding: 10px 14px; border-left: 3px solid #e05a3f; color: #587082; font: 700 12px Arial, sans-serif; text-transform: uppercase; letter-spacing: 1px; white-space: nowrap; }
+.workspace-layout { max-width: 1400px; margin: auto; display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(320px, .7fr); min-height: 650px; border: 1px solid #c7d6df; background: #fff; box-shadow: 12px 12px 0 #cfe1e6; }
+.editor-panel { min-width: 0; padding: 20px; border-right: 1px solid #c7d6df; }
+.blockly-host { width: 100%; height: 590px; min-height: 480px; }
+.json-panel { min-width: 0; padding: 24px; background: #17324d; color: #eaf4f3; }
+.panel-heading { display: flex; justify-content: space-between; gap: 16px; align-items: start; }
+.panel-heading .eyebrow { color: #ffb38a; }
+h2 { margin-bottom: 0; color: #fff; font-size: 1.55rem; }
+button { border: 0; padding: 10px 13px; color: #17324d; background: #ffb38a; cursor: pointer; font-weight: 700; }
+button:hover { background: #ffd1b8; }
+pre { margin: 28px 0 0; overflow: auto; color: #d6f2e9; font: 13px/1.6 'Courier New', monospace; white-space: pre-wrap; }
+
+@media (max-width: 900px) {
+  .page-header { display: block; }
+  .header-note { display: inline-block; margin-top: 18px; }
+  .workspace-layout { grid-template-columns: 1fr; }
+  .editor-panel { border-right: 0; border-bottom: 1px solid #c7d6df; }
+  .blockly-host { height: 540px; }
+}

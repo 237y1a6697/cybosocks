@@ -1,0 +1,23 @@
+{
+  "program": [
+    {
+      "type": "repeat",
+      "times": 2,
+      "body": [
+        {
+          "type": "repeat",
+          "times": 3,
+          "body": [
+            {
+              "type": "repeat",
+              "times": 4,
+              "body": [
+                { "type": "move", "steps": 1 }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

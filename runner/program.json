@@ -1,0 +1,32 @@
+{
+  "program": [
+    {
+      "type": "say",
+      "text": "Hello from Blockly"
+    },
+    {
+      "type": "repeat",
+      "times": 2,
+      "body": [
+        {
+          "type": "move",
+          "steps": 2
+        },
+        {
+          "type": "repeat",
+          "times": 2,
+          "body": [
+            {
+              "type": "turn",
+              "direction": "right"
+            },
+            {
+              "type": "say",
+              "text": "Nested hello"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
