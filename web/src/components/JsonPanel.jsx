@@ -5,9 +5,13 @@ export default function JsonPanel({ program }) {
   const json = JSON.stringify(program, null, 2);
 
   async function copyJson() {
-    await navigator.clipboard.writeText(json);
-    setCopied(true);
-    window.setTimeout(() => setCopied(false), 1500);
+    try {
+      await navigator.clipboard.writeText(json);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 1500);
+    } catch {
+      setCopied(false);
+    }
   }
 
   return (
